@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1" />
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="@Url.Content("~/Content/_Layout_stylesheet.css")" rel="stylesheet" type="text/css" />
+    @RenderSection("Styles", false)
+</head>
+<body>
+    <div id="header">
+        <div id="header-profile-picture-wrapper"><img id = "header-profile-picture" src="http://3.bp.blogspot.com/-kHtLT-VEH00/TaPT2hIyhaI/AAAAAAAACew/iF8YE4F-brM/s1600/1190978563_2261111954595ugly_man.jpg" /></div>
+        </div>
+    <div class="navbar">
+            <div class="navbar-buttons">
+            @Html.ActionLink("Vänner", "About", "Home")</div>
+            <div class="navbar-buttons">@Html.ActionLink("Min Profil", "MyProfile", "MyProfile")</div>
+   </div>
+    <div class="view-container">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,20 @@
+﻿@model ForeverAlone.Models.MyProfileModel
+
+@{
+    ViewBag.Title = "MyPageView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Styles {
+    <link href="@Url.Content("~/Content/MyProfileView_Style.css")" rel="stylesheet" type="text/css" />
+}
+
+<h2>My Profile</h2>
+
+<p>Welcome, @Model.Username!</p> 
+<p>Your town: @Model.City</p>
+<div id="test">Hello</div>
+
+
+
+
+
